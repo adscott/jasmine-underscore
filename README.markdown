@@ -22,12 +22,12 @@ For example:
 
 Often it is desirable to pass multiple examples through a test. This can be done like so:
 
-`describe('calculations', function () {
-  using([1, 2, 3], [2, 3, 5], function (first, second, total) {
+    describe('calculations', function () {
+      using([1, 2, 3], [2, 3, 5], function (first, second, total) {
   
-    it('should sum ' + first + ' and ' + second, function () {
-        expect(first + second).toEqual(total);
+        it('should sum ' + first + ' and ' + second, function () {
+            expect(first + second).toEqual(total);
+        });
+  
+      });
     });
-  
-  });
-});`
