@@ -22,12 +22,11 @@ For example:
 
 Often it is desirable to pass multiple examples through a test. This can be done like so:
 
-    describe('calculations', function () {
-      using([1, 2, 3], [2, 3, 5], function (first, second, total) {
-  
-        it('should sum ' + first + ' and ' + second, function () {
-            expect(first + second).toEqual(total);
+    describe('unit conversion', function () {
+      using([10, "metres", "centimetres", 1000], [12, "inches", "feet", 1], function (length, unit, desiredUnit, expectedValue) {
+        it('should show that ' + expected, function () {
+          var length = new Length(value, unit);
+          expect(length.to(desiredUnit)).toEqual(expectedVAlue);
         });
-  
       });
     });
