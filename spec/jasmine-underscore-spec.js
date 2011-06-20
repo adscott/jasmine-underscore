@@ -55,13 +55,13 @@ describe('jasmine-underscore', function () {
     });
     
     it('should be flatten', function () {
-      expect([1, 2, 3, 4]).toBeFlatten();
-      expect([1, [2], [3, [[[4]]]]]).not.toBeFlatten();
+      expect([1, 2, 3, 4]).toBeFlat();
+      expect([1, [2], [3, [[[4]]]]]).not.toBeFlat();
     });
     
     it('should be uniq', function () {
-      expect([1, 2, 3, 4]).toBeUniq();
-      expect([1, 2, 1, 3, 1, 4]).not.toBeUniq();
+      expect([1, 2, 3, 4]).toHaveUniqueValues();
+      expect([1, 2, 1, 3, 1, 4]).not.toHaveUniqueValues();
     });
     
     it('should be without', function () {

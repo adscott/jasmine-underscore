@@ -53,13 +53,13 @@ Underscore has a number of methods for interrogating state. Any underscore funct
   - `expect([1, 2, 3]).toBeCompact();`
   - `expect([0, 1, false, 2, '', 3]).not.toBeCompact();`
 
-- `toBeFlatten()`
-  - `expect([1, 2, 3, 4]).toBeFlatten();`
-  - `expect([1, [2], [3, [[[4]]]]]).not.toBeFlatten();`
+- `toBeFlat()`
+  - `expect([1, 2, 3, 4]).toBeFlat();`
+  - `expect([1, [2], [3, [[[4]]]]]).not.toBeFlat();`
 
-- `toBeUniq()`
-  - `expect([1, 2, 3, 4]).toBeUniq();`
-  - `expect([1, 2, 1, 3, 1, 4]).not.toBeUniq();`
+- `toHaveUniqueValues()`
+  - `expect([1, 2, 3, 4]).toHaveUniqueValues();`
+  - `expect([1, 2, 1, 3, 1, 4]).not.toHaveUniqueValues();`
   
 - `toBeWithout(1, 'a', etc..)`
   - `expect([2, 3, 4]).toBeWithout(0, 1);`
