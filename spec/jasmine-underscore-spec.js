@@ -60,7 +60,7 @@ describe('jasmine-underscore', function () {
     using([1, 2, 3], [2, 3, 5], function (first, second, total) {
       
       it('should sum ' + first + ' and ' + second, function () {
-          expect(first + second).toEqual(total);
+        expect(first + second).toEqual(total);
       });
       
     });
@@ -73,6 +73,24 @@ describe('jasmine-underscore', function () {
         expect(greeting).toMatch(/^Hello/);
       });
     
+    });
+    
+    using([1, 2], [3, 4], function (array) {
+      
+      it('should have a length of 2 for [' + array[0] + ', ' + array[1] + ']', function () {
+        expect(array.length).toEqual(2);
+      });
+      
+    });
+  });
+  
+  describe('using parameter count mismatch', function () {
+    it('should throw an exception', function () {
+      var f = function () {
+        using([1, 2, 3], [1, 2], function (foo, bar, baz) {});
+      };
+      
+      expect(f).toThrow('Parameter count mismatch');
     });
   });
 });
