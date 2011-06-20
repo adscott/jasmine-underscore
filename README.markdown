@@ -20,19 +20,26 @@ For example:
 
 ## Using examples
 
-Often it is desirable to pass multiple examples through a test. This can be done like so:
+Underscore is great for generating examples for specs:
 
-    describe('unit conversion', function () {
+    _([
+        [1, 2, 3], 
+        [2, 3, 5]
+      ]).each(function (vals) {
       
-      using(
-        [10, "metres", "centimetres", 1000], 
-        [12, "inches", "feet", 1], 
-        function (length, unit, desiredUnit, expectedValue) {
-        
-        it('should show that ' + length + ' ' + unit + ' is ' + expectedValue ' ' + desiredUnit, function () {
-          var length = new Length(value, unit);
-          expect(length.to(desiredUnit)).toEqual(expectedValue);
-        });
-      
+      var first = vals[0];
+      var second = vals[1];
+      var total = vals[2];
+  
+      it('should sum ' + first + ' and ' + second, function () {
+          expect(sum(first, second)).toEqual(total);
+      });
+    });
+
+However, this is quite noisy. The `using` keyword can be used to reduce this noise, as shown.
+
+    using([1, 2, 3], [2, 3, 5], function (first, second, total) {
+      it('should sum ' + first + ' and ' + second, function () {
+          expect(sum(first, second)).toEqual(total);
       });
     });
