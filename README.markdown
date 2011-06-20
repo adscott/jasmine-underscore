@@ -31,7 +31,7 @@ Often it is desirable to pass multiple examples through a test. This can be done
         
         it('should show that ' + length + ' ' + unit + ' is ' + expectedValue ' ' + desiredUnit, function () {
           var length = new Length(value, unit);
-          expect(length.to(desiredUnit)).toEqual(expectedVAlue);
+          expect(length.to(desiredUnit)).toEqual(expectedValue);
         });
       
       });
