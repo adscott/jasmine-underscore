@@ -48,6 +48,26 @@ describe('jasmine-underscore', function () {
     it('should be undefined', function () {
       expect(undefined).toBeUndefined();	
     });
+    
+    it('should be compact', function () {
+      expect([1, 2, 3]).toBeCompact();
+      expect([0, 1, false, 2, '', 3]).not.toBeCompact();
+    });
+    
+    it('should be flatten', function () {
+      expect([1, 2, 3, 4]).toBeFlatten();
+      expect([1, [2], [3, [[[4]]]]]).not.toBeFlatten();
+    });
+    
+    it('should be uniq', function () {
+      expect([1, 2, 3, 4]).toBeUniq();
+      expect([1, 2, 1, 3, 1, 4]).not.toBeUniq();
+    });
+    
+    it('should be without', function () {
+      expect([2, 3, 4]).toBeWithout(0, 1);
+      expect([1, 2, 1, 3, 1, 4]).not.toBeWithout(0, 1);
+    });
   });
   
   describe('negated matchers', function () {

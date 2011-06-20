@@ -13,11 +13,58 @@ Simply download _jasmine-underscore.js_ from the [master](https://github.com/ads
 
 Underscore has a number of methods for interrogating state. Any underscore function that is prefixed with 'is' can be used as a matcher:
 
-For example:
+- `toBeEmpty()`
+  - `expect([]).toBeEmpty();`	
 
-- `toBeArray`
-  - e.g. `expect([1, 2, 3]).toBeArray()`
+- `toBeElement()`
+  - `expect(document.body).toBeElement();`	
 
+- `toBeArray()`
+  - `expect([1]).toBeArray();`
+
+- `toBeArguments()`
+  - `expect(arguments).toBeArguments();`
+
+- `toBeFunction()`
+  - `expect(function () {}).toBeFunction();`	
+
+- `toBeString()`
+  - `expect('foo').toBeString();`
+  	
+- `toBeNumber`
+  - `expect(2).toBeNumber();`	
+
+- `toBeBoolean()`
+  - `expect(false).toBeBoolean();`	
+
+- `toBeDate()`
+  - `expect(new Date()).toBeDate();`	
+
+- `toBeNaN()`
+  - `expect(NaN).toBeNaN();`	
+
+- `toBeNull()`
+  - `expect(null).toBeNull();`	
+
+- `toBeUndefined()`
+  - `expect(undefined).toBeUndefined();`
+
+- `toBeCompact()`
+  - `expect([1, 2, 3]).toBeCompact();`
+  - `expect([0, 1, false, 2, '', 3]).not.toBeCompact();`
+
+- `toBeFlatten()`
+  - `expect([1, 2, 3, 4]).toBeFlatten();`
+  - `expect([1, [2], [3, [[[4]]]]]).not.toBeFlatten();`
+
+- `toBeUniq()`
+  - `expect([1, 2, 3, 4]).toBeUniq();`
+  - `expect([1, 2, 1, 3, 1, 4]).not.toBeUniq();`
+  
+- `toBeWithout(1, 'a', etc..)`
+  - `expect([2, 3, 4]).toBeWithout(0, 1);`
+  - `expect([1, 2, 1, 3, 1, 4]).not.toBeWithout(0, 1);`
+  
 ## Using examples
 
 Underscore is great for generating examples for specs:
