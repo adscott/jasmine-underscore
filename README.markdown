@@ -68,6 +68,9 @@ Underscore has a number of methods for interrogating state. Any underscore funct
   - `expect([2, 3, 4]).toBeWithout(0, 1);`
   - `expect([1, 2, 1, 3, 1, 4]).not.toBeWithout(0, 1);`
   
+- `toInclude(1)`
+  - `expect([1, 2, 3, 4]).toInclude(2);`
+  
 ## Using examples
 
 Underscore is great for generating examples for specs:
