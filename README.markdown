@@ -40,6 +40,9 @@ Underscore has a number of methods for interrogating state. Any underscore funct
 - `toBeDate()`
   - `expect(new Date()).toBeDate();`	
 
+- `toBeRegExp()`
+  - `expect(/foo/).toBeRegExp();`
+
 - `toBeNaN()`
   - `expect(NaN).toBeNaN();`	
 

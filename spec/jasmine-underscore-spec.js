@@ -36,6 +36,10 @@ describe('jasmine-underscore', function () {
     it('should be a date', function () {
       expect(new Date()).toBeDate();	
     });
+    
+    it('should be a RegExp', function () {
+      expect(/foo/).toBeRegExp();
+    });
   
     it('should be NaN', function () {
       expect(NaN).toBeNaN();	
@@ -67,6 +71,10 @@ describe('jasmine-underscore', function () {
     it('should be without', function () {
       expect([2, 3, 4]).toBeWithout(0, 1);
       expect([1, 2, 1, 3, 1, 4]).not.toBeWithout(0, 1);
+    });
+    
+    it('should include', function () {
+      expect([1, 2, 3, 4]).toInclude(2);
     });
   });
   
