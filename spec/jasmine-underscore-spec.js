@@ -56,13 +56,23 @@ describe('jasmine-underscore', function () {
     });
   });
   
-  describe('using', function () {
+  describe('using with arrays', function () {
     using([1, 2, 3], [2, 3, 5], function (first, second, total) {
       
       it('should sum ' + first + ' and ' + second, function () {
           expect(first + second).toEqual(total);
       });
       
+    });
+  });
+    
+  describe('using with instances', function () {
+    using('Hello', 'Hello Adam', 'Hello Bob', function (greeting) {
+    
+      it('should have [' + greeting + '] starting with hello', function () {
+        expect(greeting).toMatch(/^Hello/);
+      });
+    
     });
   });
 });
