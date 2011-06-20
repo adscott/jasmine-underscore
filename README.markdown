@@ -23,10 +23,16 @@ For example:
 Often it is desirable to pass multiple examples through a test. This can be done like so:
 
     describe('unit conversion', function () {
-      using([10, "metres", "centimetres", 1000], [12, "inches", "feet", 1], function (length, unit, desiredUnit, expectedValue) {
+      
+      using(
+        [10, "metres", "centimetres", 1000], 
+        [12, "inches", "feet", 1], 
+        function (length, unit, desiredUnit, expectedValue) {
+        
         it('should show that ' + length + ' ' + unit + ' is ' + expectedValue ' ' + desiredUnit, function () {
           var length = new Length(value, unit);
           expect(length.to(desiredUnit)).toEqual(expectedVAlue);
         });
+      
       });
     });
