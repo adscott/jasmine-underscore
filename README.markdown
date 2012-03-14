@@ -70,6 +70,14 @@ Underscore has a number of methods for interrogating state. Any underscore funct
   
 - `toInclude(1)`
   - `expect([1, 2, 3, 4]).toInclude(2);`
+
+- `toBeAll`
+  - `expect([2, 4, 6]).toBeAll(function (val) { return val%2 == 0; });`
+  - `expect([1, 4, 6]).not.toBeAll(function (val) { return val%2 == 0; });`
+
+- `toBeAny`
+  - `expect([2, 3, 5]).toBeAny(function (val) { return val%2 == 0; });`
+  - `expect([1, 3, 5]).not.toBeAny(function (val) { return val%2 == 0; });`
   
 ## Using examples
 
