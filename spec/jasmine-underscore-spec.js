@@ -80,13 +80,13 @@ describe('jasmine-underscore', function () {
 
   describe('predicate matchers', function () {
     it('should match all', function () {
-      expect([1, 4, 6]).not.toBeAll(function (val) { return val%2 == 0; });
-      expect([2, 4, 6]).toBeAll(function (val) { return val%2 == 0; });
+      expect([1, 4, 6]).not.toMatchAll(function (val) { return val%2 == 0; });
+      expect([2, 4, 6]).toMatchAll(function (val) { return val%2 == 0; });
     });
 
     it('should match any', function () {
-      expect([1, 3, 5]).not.toBeAny(function (val) { return val%2 == 0; });
-      expect([2, 3, 5]).toBeAny(function (val) { return val%2 == 0; });
+      expect([1, 3, 5]).not.toMatchAny(function (val) { return val%2 == 0; });
+      expect([2, 3, 5]).toMatchAny(function (val) { return val%2 == 0; });
     });
 
   });
