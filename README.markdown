@@ -4,6 +4,8 @@ jasmine-underscore provides two extensions for [Jasmine](http://pivotal.github.c
   
 - matchers implicitly defined by object functions in [Underscore](http://documentcloud.github.com/underscore/)
 - a means to write examples into specs
+
+jasmine-underscore requires Jasmine 2.0.0+.
   
 ## Installation
 
