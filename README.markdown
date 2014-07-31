@@ -33,10 +33,10 @@ Underscore has a number of methods for interrogating state. Any underscore funct
 
 - `toBeString()`
   - `expect('foo').toBeString();`
-  	
+
 - `toBeNumber()` _(NaN === true)_
   - `expect(2).toBeNumber();`	
-  	
+
 - `toBeFinite()` _(NaN === false)_
   - `expect(2).toBeFinite();`	
 
