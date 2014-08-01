@@ -1,5 +1,5 @@
 describe('jasmine-underscore', function () {
-	
+
   describe('matchers',function () {
     it('should be empty', function () {
       expect([]).toBeEmpty();	
@@ -11,6 +11,10 @@ describe('jasmine-underscore', function () {
 
     it('should be an array', function () {
       expect([1]).toBeArray();
+    });
+
+    it('should be an object', function () {
+      expect({}).toBeObject();
     });
 
     it('should be an arguments array', function () {
@@ -26,7 +30,11 @@ describe('jasmine-underscore', function () {
     });
 
     it('should be a number', function () {
-      expect(2).toBeNumber();	
+      expect(2).toBeNumber();
+    });
+
+    it('should be a finite number', function () {
+      expect(2).toBeFinite();
     });
 
     it('should be a boolean', function () {
