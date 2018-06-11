@@ -1,13 +1,13 @@
 # jasmine-underscore
 
-jasmine-underscore provides two extensions for [Jasmine](http://pivotal.github.com/jasmine/) JavaScript Testing Framework:
+jasmine-underscore provides two extensions for [Jasmine](https://jasmine.github.io/) JavaScript Testing Framework:
   
 - matchers implicitly defined by object functions in [Underscore](http://documentcloud.github.com/underscore/)
 - a means to write examples into specs
   
 ## Installation
 
-Simply grab the _jasmine-underscore.js_ from the [latest stable release](https://github.com/downloads/adscott/jasmine-underscore/jasmine-underscore-v1.1.zip) and include it in your Jasmine's test runner file (or add it to _jasmine.yml_ file if you're using Ruby with [jasmine-gem](http://github.com/pivotal/jasmine-gem)). You'll also need [Underscore](http://documentcloud.github.com/underscore/).
+Simply grab the _jasmine-underscore.js_ from the [latest stable release](https://github.com/downloads/adscott/jasmine-underscore/jasmine-underscore-v1.1.zip) and include it in your Jasmine's test runner file (or add it to _jasmine.yml_ file if you're using Ruby with [jasmine-gem](https://github.com/jasmine/jasmine-gem)). You'll also need [Underscore](http://documentcloud.github.com/underscore/).
 
 ## Underscore matchers
 
